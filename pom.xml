@@ -50,6 +50,10 @@
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>sns</artifactId>
         </dependency>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>dynamodb</artifactId>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>software.amazon.awssdk</groupId>-->
 <!--            <artifactId>iam-policy-builder</artifactId>-->
