@@ -1,5 +1,6 @@
 package com.example.sb_test.controller;
 
+import com.example.sb_test.service.MainService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,9 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 //@RequestMapping(path = "api")
 public class MainController {
 
+    private final MainService mainService;
+
+    public MainController(MainService mainService) {
+        this.mainService = mainService;
+    }
+
     @GetMapping
     public String index() {
-        return "O imundo!";
+        return mainService.index();
     }
 
 }
