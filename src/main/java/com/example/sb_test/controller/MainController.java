@@ -3,6 +3,7 @@ package com.example.sb_test.controller;
 import com.example.sb_test.service.MainService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import software.amazon.awssdk.services.sns.model.ListTopicsResponse;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class MainController {
     }
 
     @GetMapping("list-topics")
-    public List<String> list_topics() {
+    public String list_topics() {
         return mainService.list_topics();
     }
 
